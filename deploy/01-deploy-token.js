@@ -12,7 +12,6 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     from: deployer,
     args: [INITIAL_SUPPLY],
     log: true,
-    // we need to wait if on a live network so we can verify properly
     waitConfirmations: network.config.blockConfirmations || 1,
   })
   log(`ourToken deployed at ${ourToken.address}`)

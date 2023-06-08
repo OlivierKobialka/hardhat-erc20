@@ -11,11 +11,9 @@ interface tokenRecipient {
 }
 
 contract TokenERC20 {
-  // Public variables of the token
   string public name;
   string public symbol;
   uint8 public decimals = 18;
-  // 18 decimals is the strongly suggested default, avoid changing it
   uint256 public totalSupply;
 
   // This creates an array with all balances
@@ -36,6 +34,7 @@ contract TokenERC20 {
   event Burn(address indexed from, uint256 value);
 
   /**
+   * @notice
    * Constructor function
    *
    * Initializes contract with initial supply tokens to the creator of the contract
